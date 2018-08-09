@@ -10,8 +10,7 @@
   "author": "Alberto Madueno",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "tinyspeck": "^1.4.2"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"

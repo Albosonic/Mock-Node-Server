@@ -1,12 +1,21 @@
-(function init(){
-  console.log('this is working?');
-  return 1
-}());
+let json = {
+  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
+  "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
+  "type": "url_verification"
+};
 
-$.ajax({
-  url: '/armons/endpoint',
-  cache: false,
-  success: function(response) {
-    console.log('success:', response);
-  }
-});
+json = JSON.stringify(json);
+
+function kickSlackBot(callback, userInput) {
+  $.ajax({
+    url: '/slackbot',
+    type: 'post',
+    contentType:'application/json',
+    data: json,
+    success: function(res) {
+      console.log('res====', res);
+    }
+  });
+}
+
+kickSlackBot();
